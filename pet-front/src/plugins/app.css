@@ -1,0 +1,50 @@
+.v-text-field.v-text-field--solo .v-label{
+    font-size: 14px;
+    font-weight: 300;
+    color: #98A7AD;
+}
+.v-text-field.v-text-field--solo .v-input__control{
+    min-height:38px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.v-btn--small{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+table.v-table thead tr{
+    height: 46px;
+}
+
+table.v-table thead th.sortable-icon{
+    cursor: pointer;
+}
+table.v-table thead th.sortable-icon .rotate-icon{
+    opacity: 0;
+}
+table.v-table thead th.sortable-icon.active .rotate-icon{
+    opacity: 1;
+}
+table.v-table thead th.sortable-icon.desc .rotate-icon{
+    transform: rotate(180deg);
+}
+
+.v-card{
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.07);
+    -webkit-box-shadow: 0 4px 16px rgba(0,0,0,.07);
+}
+
+.v-chip.smallest{
+    height: 18px;
+    margin: 0;
+}
+
+.v-chip.smallest .v-chip__content{
+    font-size: 12px;
+    padding: 0 5px;
+}
