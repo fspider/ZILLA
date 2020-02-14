@@ -239,7 +239,7 @@
 					console.log(res);
 					if(res.status == 200){
 						this.snackbar = true;
-						this.snackbarText = 'Document succecfully saved and sended';
+						this.snackbarText = 'Document was succecfully saved and sent';
 						this.page = 0,
 						this.numPages = 0,
 						this.file = null,

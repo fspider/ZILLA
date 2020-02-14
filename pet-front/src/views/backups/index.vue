@@ -25,7 +25,7 @@
 									Templates
 								</v-tab>
 								<v-tab href="#tab-3">
-									Sended Documents
+									Sent Documents
 								</v-tab>
 							</v-tabs>
 						</v-flex>

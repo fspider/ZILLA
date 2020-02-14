@@ -113,6 +113,7 @@ async function create(fileParam, url) {
         signers = fileParam.params.signers,
         urls = [];
 
+    console.log('-> signers' + signers);
     if(signers.length){
         signers.map(item => {
 
@@ -149,16 +150,22 @@ async function create(fileParam, url) {
 }
 async function getFormatedLInk(url) {
     let result;
+    console.log('started shorten');
+    console.log(url);
     try {
+        console.log("___1");
         result = await bitly.shorten(url);
+        console.log("___2");
     } catch (e) {
         throw e;
     }
+    console.log("-->Okay");
 
     return Promise.resolve(result);
 }
 
 async function sendMail(item){
+    console.log('---> send email', item);
     getFormatedLInk(item.url).then((url) => {
         transporter.sendMail({
             from: 'DocSigner <doc.signer@gmail.com>',
@@ -167,7 +174,7 @@ async function sendMail(item){
             text: 'Hi, ' + item.name + " you have recived the document to sign. <br/> Open this link to sign: " + url.url
         });
         
-        console.log('sended mail');
+        console.log('sent mail');
 
         if(item.phone){
             http.get('http://sms.cellcom.co.il/scripts/smsgate.asp?Username=LEV&Password=LEVSMS&Target=' + item.phone +"&Source=0522199451&Message=Your link " + url.url + "&Validity=1&Replace=1&Immediate=True", (resp) => {

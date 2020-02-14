@@ -3,7 +3,7 @@
 		<v-flex xs12 align-self-center>
 			<div class="placeholder">
 				<img src="https://i.ya-webdesign.com/images/page-vector-black-2.png" alt="">
-				<p class="title">Sorry, you dont recived any documents yet.</p>
+				<p class="title">Sorry, you haven't received any documents yet.</p>
 			</div>
 		</v-flex>
 	</v-layout>

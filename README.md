@@ -10,5 +10,5 @@ More Details: http://
 * MongoDB
 
 ### Structure
-* pet-front: npm server.js
+* pet-front: node server.js
 * pet-server: npm run serve | yarn serve

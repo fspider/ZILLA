@@ -324,17 +324,20 @@
 						file.file = this.arrayBufferToBase64(this.fileBase64);
 					}
 
+					console.log(file)
+
 					const requestOptions = {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + user.token },
 						body: JSON.stringify(file)
 					};
 					let url = window.location.protocol + '//' + window.location.hostname + ':4000/file/save';
+					console.log('url ' + url)
 					return fetch(url, requestOptions).then((res)=>{
 						console.log(res);
 						if(res.status == 200){
 							this.snackbar = true;
-							this.snackbarText = 'Document was succecfully saved and sent';
+							this.snackbarText = 'Document was successfully saved and sent';
 							this.page = 0,
 							this.numPages = 0,
 							this.file = null,
